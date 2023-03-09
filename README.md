@@ -10,7 +10,7 @@ JavaScript
 jQuery
 ```
 ## Getting Started
-To view the website, simply click on the link: https://alejandrotamargo.github.io/Personal/
+To view the website, simply click on the link: https://alejandrotamargo.github.io/PersonalPortfolio/
 
 ## Contact
 If you have any questions or comments, please feel free to contact me at the following email address: alejandrotamargod@gmail.com.
@@ -29,7 +29,7 @@ JavaScript
 jQuery
 ```
 ## Para empezar
-Para ver la página web, simplemente haz clic en el siguiente enlace: https://alejandrotamargo.github.io/Personal/
+Para ver la página web, simplemente haz clic en el siguiente enlace: https://alejandrotamargo.github.io/PersonalPortfolio/
 
 ## Contacto
 Si tienes preguntas o comentarios, no dudes en ponerte en contacto conmigo a través del siguiente correo electrónico: alejandrotamargod@gmail.com.
