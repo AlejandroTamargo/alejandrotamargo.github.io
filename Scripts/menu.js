@@ -47,9 +47,17 @@ function generateStars() {
     star.style.left = getRandomPosition() + "%";
 
     starsContainer.appendChild(star);
+
+    // Añadir y eliminar la clase "blink" de forma aleatoria
+    setInterval(() => {
+      if (Math.random() < 0.5) {
+        star.classList.add("blink");
+      } else {
+        star.classList.remove("blink");
+      }
+    }, getRandomBlinkTime());
   }
 }
-
 function getRandomPosition() {
   return Math.random() * 100;
 }
@@ -60,6 +68,12 @@ function getRandomSize() {
   return sizes[index];
 }
 
+function getRandomBlinkTime() {
+  // Devuelve un número aleatorio entre 0.5 y 2 segundos
+  return Math.floor(Math.random() * 1500) + 500;
+}
+
 setTimeout(() => {
   generateStars();
 }, 1000);
+
