@@ -1,0 +1,188 @@
+html {
+    font-family: sans-serif; 
+    -ms-text-size-adjust: 100%; 
+    -webkit-text-size-adjust: 100%; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    overflow-y: auto
+}
+/*
+Código main / Main Code
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400&family=Source+Sans+Pro:wght@200&display=swap');
+
+.firstBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    background: #f3f7f9;
+    text-align: center;
+}
+.first{
+    text-align: right;
+    padding: 0;
+    background: linear-gradient(44deg, rgba(5, 176, 219, .2) 0%, rgba(11, 11, 11, .95) 85%) 100% no-repeat, black 0 0/cover no-repeat !important;
+}
+.first img {
+    position: absolute;
+    left: 8%;
+    bottom: -70px;
+    max-height: 90vh;
+    max-width: 80%;
+}
+
+section .title {
+    position: absolute;
+    right: 5vw;
+    width: 50%;
+    text-align: right;
+    padding-bottom: 10px;
+    margin-top: -90px;
+}
+@media (min-width: 1900px){
+    section .title .texto {
+        font-size: 1.5vw;
+        line-height: 2vw;
+    }
+}
+
+section .title .texto {
+    font-size: 2vw;
+    line-height: 2vw;
+    color: #fff;
+    -webkit-animation: byBottom 1s 0.25s ease both !important;
+    animation: byBottom 1s 0.25s ease both !important;
+    font-weight: 600;
+    letter-spacing: 0.25vw;
+    font-family: 'Source Sans Pro', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    max-width: 80%;
+    float: right;
+}
+
+section .title .text {
+    font-size: 7vw;
+    color: #fff;
+    width: 100%;
+    text-transform: uppercase;
+    transform: translateX(-100%);
+    -webkit-animation: byBottom 1s ease both;
+    animation: byBottom 1s ease both;
+    font-weight: 600;
+    letter-spacing: 0.25vw;
+    font-family: 'Source Sans Pro', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+section .title {
+    position: absolute;
+    right: 5vw;
+    width: 50%;
+    text-align: right;
+    padding-bottom: 10px;
+    margin-top: -90px;
+}
+.hero img {
+    position: absolute;
+    left: 8%;
+    bottom: -70px;
+    max-height: 90vh;
+    max-width: 80%;
+}
+img {
+    border-style: none;
+}
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.contenedor {
+    display: flex;
+}
+
+.blue{
+    background-color: aqua!important;
+}
+
+.secondMain{
+    display: flex;
+    text-align: left;
+}
+
+/*Me sigue*/
+
+
+@keyframes rotate {
+    from {
+      rotate: 0deg;
+    }
+    50% {
+      scale: 1 1.5;
+    }
+    to {
+      rotate: 360deg;
+    }
+  }
+  
+  #blob {
+    background-color: white;
+    height: 34vmax;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, #BF40BF, purple);
+    animation: rotate 20s infinite;
+    opacity: 0.8;
+    filter: blur(12vmax);
+  }
+  
+  #blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(12vmax);
+  }
+  
+  /*-- Stars --*/
+
+  #stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+  }
+  
+  .star {
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+  }
+  
+  .star--small {
+    width: 1px;
+    height: 1px;
+  }
+  
+  .star--medium {
+    width: 2px;
+    height: 2px;
+  }
+  
+  .star--large {
+    width: 3px;
+    height: 3px;
+  }
+  
