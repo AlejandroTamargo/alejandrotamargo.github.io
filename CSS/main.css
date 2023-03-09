@@ -1,14 +1,15 @@
 html {
     font-family: sans-serif; 
     -ms-text-size-adjust: 100%; 
-    -webkit-text-size-adjust: 100%; 
+    -webkit-text-size-adjust: 100%;
+     overflow-x: hidden;  
 }
 
 body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; 
-    overflow-y: auto
+    overflow-x: hidden;  
+    overflow-y: auto;
 }
 /*
 Código main / Main Code
@@ -137,6 +138,7 @@ img {
     aspect-ratio: 1;
     position: absolute;
     left: 50%;
+    transform: translateX(-50%);
     top: 50%;
     translate: -50% -50%;
     border-radius: 50%;

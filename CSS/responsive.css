@@ -17,12 +17,6 @@
         margin-top: 2em;
 
     }
-    body {
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden; 
-      overflow-y: auto;
-  }
   }
   @media (max-width: 500px){
     .header a {
@@ -43,10 +37,4 @@
         margin-top: 2em;
 
     }
-    body {
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden; 
-      overflow-y: auto;
-  }
   }
