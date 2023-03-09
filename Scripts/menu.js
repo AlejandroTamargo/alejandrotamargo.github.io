@@ -39,7 +39,7 @@ toggleButton.addEventListener('click', function() {
 function generateStars() {
   const starsContainer = document.getElementById("stars");
 
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 300; i++) {
     const star = document.createElement("div");
     star.classList.add("star");
     star.classList.add(`star--${getRandomSize()}`);
