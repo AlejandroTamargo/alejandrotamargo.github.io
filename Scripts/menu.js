@@ -80,14 +80,13 @@ setTimeout(() => {
 
 /* -- Swiper JS -- */ 
 
-var mySwiper = new Swiper('.swiper-container', {
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-  },
+var swiper = new Swiper('.swiper-container', {
+  slidesPerView: 3,
+  spaceBetween: 30,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 });
+
 
