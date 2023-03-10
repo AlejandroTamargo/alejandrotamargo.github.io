@@ -3,6 +3,19 @@
       font-size: 1rem;
   }
 }
+@media (max-width: 767px) {
+  .tabs-container.affix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+}
+
+body {
+  padding-top: 70px;
+}
 .tabs-container {
   display: flex;
   flex-direction: row;
@@ -14,8 +27,8 @@
   z-index: 1000;
 }
 /*
-Se le da la posición fija cuando llega al techo de la página
-http://jsfiddle.net/39james/WucN3/
+Se le da la posición fija cuando llega al techo de la página 
+http://jsfiddle.net/39james/WucN3/ 
 */
 .tabs-container.affix{
   position:fixed;

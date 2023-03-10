@@ -3,6 +3,7 @@ function menuFixed() {
 
     $(window).scroll(function() {  
         if ($(window).scrollTop() > stickySidebar) {
+          // affix gives us the sticky menu or removes it
             $('.tabs-container').addClass('affix');
         }
         else {
@@ -76,4 +77,17 @@ function getRandomBlinkTime() {
 setTimeout(() => {
   generateStars();
 }, 1000);
+
+/* -- Swiper JS -- */ 
+
+var mySwiper = new Swiper('.swiper-container', {
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
 
