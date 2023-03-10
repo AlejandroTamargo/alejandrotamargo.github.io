@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Alejandro Tamargo">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="CSS/menu.css">
+    <script src="/Scripts/Script1.js"></script>
+    <style>
+      #carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 500px;
+  touch-action: pan-y;
+}
+
+#carousel-content {
+  display: flex;
+  width: fit-content;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  margin-right: 20px;
+  position: relative;
+  text-align: center;
+  max-width: 100%;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-item h3 {
+  margin-top: 20px;
+}
+
+.carousel-item p {
+  margin-top: 10px;
+}
+
+.active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.inactive {
+  opacity: 0.3;
+  transition: opacity 0.5s ease-in-out;
+}
+
+    </style>
+</head>
+<body>
+
+  <div id="carousel">
+    <div id="carousel-content">
+      <div class="carousel-item active">
+        <img src="https://example.com/image1.jpg" alt="News Image 1">
+        <h3>News Title 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="https://example.com/image2.jpg" alt="News Image 2">
+        <h3>News Title 2</h3>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="https://example.com/image3.jpg" alt="News Image 3">
+        <h3>News Title 3</h3>
+        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    const carousel = document.getElementById('carousel');
+const content = document.getElementById('carousel-content');
+const items = document.querySelectorAll('.carousel-item');
+
+let isDragging = false;
+let startPosition = 0;
+let currentTranslate = 0;
+let prevTranslate = 0;
+let animationID = 0;
+let currentIndex = 0;
+
+function setPositionByIndex() {
+  currentTranslate = currentIndex * -items[0].clientWidth;
+  prevTranslate = currentTranslate;
+  content.style.transform = `translateX(${currentTranslate}px)`;
+  updateItems();
+}
+
+function updateItems() {
+  items.forEach(item => {
+    item.classList.remove('active');
+    item.classList.add('inactive');
+  });
+  items[currentIndex].classList.add('active');
+}
+
+function touchStart(index) {
+  return function(event) {
+    currentIndex = index;
+    startPosition = event.type.startsWith('touch') ? event.touches[0].clientX : event.clientX;
+    isDragging = true;
+    animationID = requestAnimationFrame(animation);
+  }
+}
+
+function touchEnd() {
+  isDragging = false;
+  cancelAnimationFrame(animationID);
+  const movedBy = currentTranslate - prevTranslate;
+  if (movedBy < -100 && currentIndex < items.length - 1) {
+    currentIndex++;
+  }
+  if (movedBy > 100 && currentIndex > 0) {
+    currentIndex--;
+  }
+  setPositionByIndex();
+}
+
+function touchMove(event) {
+  if (isDragging) {
+    const currentPosition = event.type.startsWith('touch') ? event.touches[0].clientX : event.clientX;
+    currentTranslate = prevTranslate + currentPosition - startPosition;
+  }
+}
+
+items.forEach((item, index) => {
+  item.addEventListener('mousedown', touchStart(index));
+  item.addEventListener('mouseup', touchEnd);
+  item.addEventListener('mousemove', touchMove);
+  item.addEventListener('touchstart', touchStart(index));
+  item.addEventListener('touchend', touchEnd);
+  item.addEventListener('touchmove', touchMove);
+});
+
+window.addEventListener('resize', setPositionByIndex);
+
+  </script>
+  
+
+
+</body>
+</html>
