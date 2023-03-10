@@ -79,7 +79,7 @@ setTimeout(() => {
 }, 1000);
 
 /* -- Swiper JS -- */ 
-
+$(document).ready(function() {
 var swiper = new Swiper('.swiper-container', {
   slidesPerView: 3,
   spaceBetween: 30,
@@ -88,5 +88,5 @@ var swiper = new Swiper('.swiper-container', {
     prevEl: '.swiper-button-prev',
   },
 });
-
+});
 
