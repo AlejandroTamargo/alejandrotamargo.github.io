@@ -110,7 +110,7 @@ window.addEventListener('mouseup', ()=>{
 });
 slider.addEventListener('mousemove', (a)=>{
     if(!pressed) return;
-    e.preventDefault();
+    a.preventDefault();
     x =a.offsetX
     innerSlider.style.left = `${x-startx}px`;
 
