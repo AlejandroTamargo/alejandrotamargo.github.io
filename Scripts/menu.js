@@ -77,10 +77,13 @@ function getRandomBlinkTime() {
 setTimeout(() => {
   generateStars();
 }, 1000);
-
+window.addEventListener('load', function() {
+  // Aquí iría el código que utiliza el elemento 'slider'
+  slider();
+});
 /* -- Slider JS -- */ 
 function slider (){
-let slider = document.querySelector('.slider');
+let slider = document.getElementById('slider');
 let innerSlider = document.querySelector('.slider-inner');
 
 let pressed = false;
@@ -118,14 +121,15 @@ slider.addEventListener('mousemove', (a)=>{
 });
 
 function paraBorde(){
-    let outer = slider.getBoundingClientRect();
-    let inner = innerSlider.getBoundingClientRect();
+  let outer = slider.getBoundingClientRect();
+  let inner = innerSlider.getBoundingClientRect();
 
-    if (parseInt(innerSlider.style.left)> 0) {
-        innerSlider.style.left = '0px';
-    } else if (inner.right < outer.right) {
-        innerSlider.style.left = `-${inner.width - outer.width }px`;
-    }
+if (parseInt(innerSlider.style.left) > 0) {
+    innerSlider.style.left = '0px';
+} else if (inner.right < outer.right) {
+    innerSlider.style.left = `-${inner.width - outer.width}px`;
+}
+
 }
 
 }

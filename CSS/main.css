@@ -221,7 +221,7 @@ i{
 i:hover{
   color: rgb(167, 11, 245);
 }
-.slider{
+#slider{
   position: absolute;
   left: 10%;
   top: 30%;
