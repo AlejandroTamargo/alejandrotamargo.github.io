@@ -78,15 +78,56 @@ setTimeout(() => {
   generateStars();
 }, 1000);
 
-/* -- Swiper JS -- */ 
-$(document).ready(function() {
-var swiper = new Swiper('.swiper-container', {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+/* -- Slider JS -- */ 
+function slider (){
+let slider = document.querySelector('.slider');
+let innerSlider = document.querySelector('.slider-inner');
+
+let pressed = false;
+let startx;
+let x;
+slider.addEventListener('mousedown', (a)=>{
+
+    pressed = true;
+    startx = a.offsetX - innerSlider.offsetLeft;
+    slider.style.cursor = "grabbing";
+
 });
+
+slider.addEventListener('mouseenter', ()=>{
+    slider.style.cursor = "grab";
+
 });
+slider.addEventListener('mouseleave', ()=>{
+    slider.style.cursor = "default";
+});
+
+slider.addEventListener('mouseup', ()=>{
+    slider.style.cursor = "grab";
+});
+window.addEventListener('mouseup', ()=>{
+    pressed= false;
+});
+slider.addEventListener('mousemove', (a)=>{
+    if(!pressed) return;
+    e.preventDefault();
+    x =a.offsetX
+    innerSlider.style.left = `${x-startx}px`;
+
+    paraBorde();
+});
+
+function paraBorde(){
+    let outer = slider.getBoundingClientRect();
+    let inner = innerSlider.getBoundingClientRect();
+
+    if (parseInt(innerSlider.style.left)> 0) {
+        innerSlider.style.left = '0px';
+    } else if (inner.right < outer.right) {
+        innerSlider.style.left = `-${inner.width - outer.width }px`;
+    }
+}
+
+}
+slider();
 
