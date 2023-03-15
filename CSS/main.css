@@ -248,5 +248,18 @@ i:hover{
   padding: 3rem;
 }
 
+/* -- Icons --*/
+.socials{
+    width: 50%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.socials i{
+    color:black;
+}
+.socials i:hover{
+    color:purple;
+}
 
 
