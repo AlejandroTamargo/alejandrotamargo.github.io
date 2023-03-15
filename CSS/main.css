@@ -254,6 +254,7 @@ i:hover{
     display: flex;
     margin-left: auto;
     margin-right: auto;
+    justify-content: space-evenly;
 }
 .socials i{
     color:black;
