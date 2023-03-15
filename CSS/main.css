@@ -117,7 +117,7 @@ img {
 }
 
 .secondMain{
-    /*display: flex;*/
+    display: flex;
     text-align: left;
 }
 
