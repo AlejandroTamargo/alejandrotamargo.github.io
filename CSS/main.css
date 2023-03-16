@@ -291,7 +291,7 @@ a:-webkit-any-link {
       rotate: 360deg;
     }
   }
-  
+
   #blob {
     background-color: white;
     height: 34vmax;
@@ -299,21 +299,15 @@ a:-webkit-any-link {
     position: absolute;
     left: 50%;
     top: 50%;
-    translate: -50% -50%;
     border-radius: 50%;
-    background: linear-gradient(to right, #BF40BF, purple);
+    translate: -50% -50%;
+    
+    background: linear-gradient(to right, lightblue, purple);
     animation: rotate 20s infinite;
     opacity: 0.8;
-    filter: blur(12vmax);
+    filter: blur(200px);
   }
   
-  #blur {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-    backdrop-filter: blur(12vmax);
-  }
   
   /*-- Stars --*/
 
