@@ -82,7 +82,7 @@ Código main / Main Code
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400&family=Source+Sans+Pro:wght@200&display=swap');
 
-.first-box{
+.box{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -97,8 +97,12 @@ Código main / Main Code
     padding: 0;
     background: linear-gradient(44deg, rgba(5, 176, 219, .2) 0%, rgba(11, 11, 11, .95) 85%) 100% no-repeat, black 0 0/cover no-repeat !important;
 }
-.height-box{
+.height-box-a{
     min-height: 40vh;
+    padding-top: 5rem;
+}
+.height-box-b{
+    min-height: 100vh;
 }
 .first img {
     position: absolute;
@@ -176,11 +180,14 @@ img {
 }
 
 .about-text{
-    margin: 5rem;
+    width: 70%;
+    margin-top: 5rem;
+    font-size: large;
+    line-height: 1.5rem;
     text-align: center;
 }
 
-/*Menú e Idioma*/
+/* -- Menu -- */
 
 body {
   padding-top: 70px;
@@ -199,11 +206,7 @@ body {
 Se le da la posición fija cuando llega al techo de la página 
 http://jsfiddle.net/39james/WucN3/ 
 */
-.tabs-container.affix{
-  position:fixed;
-  top:0;
-  right:0;
-}
+
 .tab {
   display: flex;
   justify-content: center;
@@ -228,7 +231,7 @@ a:-webkit-any-link {
   cursor: pointer;
 }
 
-/*Seleccion de Idioma*/
+/* -- Language Selector -- */
 .language-selector {
   position: fixed;
   top: 10px;
@@ -274,7 +277,7 @@ a:-webkit-any-link {
   text-decoration: none;
 }
 
-/*Me sigue*/
+/*-- Follows me --*/
 
 
 @keyframes rotate {
@@ -402,13 +405,38 @@ i:hover{
     margin-left: auto;
     margin-right: auto;
     justify-content: space-evenly;
+    margin: 2rem 0rem;
 }
-.socials i{
-    color:black;
+
+.socials a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
 }
-.socials i:hover{
-    color:purple;
+
+.socials button {
+  background-color: #0077B5;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  transition: all 0.3s ease;
 }
+
+.socials button:hover {
+  transform: scale(1.1);
+}
+
+.socials .fa-brands {
+  font-size: 24px;
+}
+
+.socials .fa-envelope {
+  font-size: 20px;
+}
+
 
 /*
 Animations
