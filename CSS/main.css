@@ -41,6 +41,20 @@ Responsive
 
   }
 }
+@media (min-width: 800px){
+  .tab {
+      font-size: 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .tabs-container.affix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+}
 @media (max-width: 500px){
   .header a {
     float: none;
@@ -62,41 +76,29 @@ Responsive
   }
 }
 
-@media (min-width: 800px){
-  .tab {
-      font-size: 1rem;
-  }
-}
-@media (max-width: 767px) {
-  .tabs-container.affix {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-}
-
 /*
 Código main / Main Code
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400&family=Source+Sans+Pro:wght@200&display=swap');
 
-.firstBox{
+.first-box{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     position: relative;
     background: #f3f7f9;
     text-align: center;
 }
 .first{
+    min-height: 100vh;
     text-align: right;
     padding: 0;
     background: linear-gradient(44deg, rgba(5, 176, 219, .2) 0%, rgba(11, 11, 11, .95) 85%) 100% no-repeat, black 0 0/cover no-repeat !important;
+}
+.height-box{
+    min-height: 40vh;
 }
 .first img {
     position: absolute;
@@ -115,10 +117,7 @@ section .title {
     margin-top: -90px;
     animation: fadeIn 5s;
 }
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
+
 @media (min-width: 1900px){
     section .title .texto {
         font-size: 1.5vw;
@@ -176,7 +175,7 @@ img {
     background-color: aqua!important;
 }
 
-.secondMain{
+.about-text{
     margin: 5rem;
     text-align: center;
 }
@@ -411,4 +410,10 @@ i:hover{
     color:purple;
 }
 
-
+/*
+Animations
+*/
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
