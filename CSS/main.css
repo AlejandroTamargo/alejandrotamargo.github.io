@@ -11,17 +11,17 @@ body {
     overflow-x: hidden;  
     overflow-y: auto;
 }
+
 * {
   caret-color: transparent;
 }
 
 
-/*
-Responsive
-*/
+/* -- Responsive -- */
 
 
 @media (max-width: 1000px){
+
   .header a {
     float: none;
     display: block;
@@ -33,19 +33,16 @@ Responsive
     flex-direction: column;
     align-items: flex-start;
   }
-  header img{
-      width: 30%;
-      height: auto;
-      margin: auto;
-      margin-top: 2em;
 
+  header img{
+    width: 30%;
+    height: auto;
+    margin: auto;
+    margin-top: 2em;
   }
+
 }
-@media (min-width: 800px){
-  .tab {
-      font-size: 1rem;
-  }
-}
+
 @media (max-width: 767px) {
   .tabs-container.affix {
     position: fixed;
@@ -55,6 +52,7 @@ Responsive
     z-index: 1000;
   }
 }
+
 @media (max-width: 500px){
   .header a {
     float: none;
@@ -76,9 +74,23 @@ Responsive
   }
 }
 
-/*
-Código main / Main Code
-*/
+@media (min-width: 1900px){
+  section .title .texto {
+      font-size: 1.5vw;
+      line-height: 2vw;
+  }
+}
+
+@media (min-width: 800px){
+  .tab {
+      font-size: 1rem;
+  }
+}
+
+
+/* -- Código main / Main Code -- */
+
+
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400&family=Source+Sans+Pro:wght@200&display=swap');
 
@@ -122,12 +134,7 @@ section .title {
     animation: fadeIn 5s;
 }
 
-@media (min-width: 1900px){
-    section .title .texto {
-        font-size: 1.5vw;
-        line-height: 2vw;
-    }
-}
+
 
 section .title .texto {
     font-size: 2vw;
@@ -187,11 +194,14 @@ img {
     text-align: center;
 }
 
+
 /* -- Menu -- */
+
 
 body {
   padding-top: 70px;
 }
+
 .tabs-container {
   display: flex;
   flex-direction: row;
@@ -202,10 +212,16 @@ body {
   background: #fff;
   z-index: 1000;
 }
+
 /*
 Se le da la posición fija cuando llega al techo de la página 
 http://jsfiddle.net/39james/WucN3/ 
 */
+.tabs-container.affix{
+  position:fixed;
+  top:0;
+  right:0;
+}
 
 .tab {
   display: flex;
@@ -231,7 +247,10 @@ a:-webkit-any-link {
   cursor: pointer;
 }
 
+
 /* -- Language Selector -- */
+
+
 .language-selector {
   position: fixed;
   top: 10px;
@@ -277,7 +296,8 @@ a:-webkit-any-link {
   text-decoration: none;
 }
 
-/*-- Follows me --*/
+
+/* -- Follows me -- */
 
 
 @keyframes rotate {
@@ -301,15 +321,14 @@ a:-webkit-any-link {
     top: 50%;
     border-radius: 50%;
     translate: -50% -50%;
-    
     background: linear-gradient(to right, lightblue, purple);
     animation: rotate 20s infinite;
     opacity: 0.8;
     filter: blur(200px);
   }
   
-  
-  /*-- Stars --*/
+  /* -- Stars -- */
+
 
 #stars {
   position: fixed;
@@ -341,7 +360,10 @@ a:-webkit-any-link {
   height: 3px;
 }
 
+
 /* Nueva clase para hacer parpadear la estrella */
+
+
 .blink {
   animation: blink 0.5s linear infinite alternate;
 }
@@ -398,50 +420,107 @@ i:hover{
   padding: 3rem;
 }
 
-/* -- Icons --*/
-.socials{
-    width: 50%;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: space-evenly;
-    margin: 2rem 0rem;
+/* -- Contact -- */
+
+.botones-contacto {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.125rem;
 }
 
-.socials a {
-  display: inline-block;
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-.socials button {
+.botones-contacto .btn {
+  margin-left: 15px;
   background-color: #0077B5;
   color: #fff;
   border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.socials button:hover {
-  transform: scale(1.1);
+.botones-contacto .btn:hover {
+  background-color: #005E93;
 }
 
-.socials .fa-brands {
-  font-size: 24px;
+.btn-linkedin {
+  background-color: #0077B5;
+  color: #fff;
+  border: none;
 }
 
-.socials .fa-envelope {
-  font-size: 20px;
+.btn-linkedin:hover {
+  background-color: #005E93;
+}
+
+.btn-github {
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+
+.btn-github:hover {
+  background-color: #191919;
 }
 
 
-/*
-Animations
-*/
+/* -- Animations -- */
+
+
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
+}
+
+.fab:hover{
+  color: grey!important;
+}
+
+
+/* -- Footer -- */
+
+
+.site-footer {
+  width: 100%;
+  position: relative;
+  background-color: #f8f9fa;
+  padding: 60px 0;
+}
+
+.site-footer .row {
+  width: 100%;
+  display: flex;
+  margin-left: 3rem;
+
+}
+
+.site-footer .col {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.site-footer h4 {
+  color: #343a40;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.site-footer p {
+  color: #6c757d;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+
+.site-footer ul li {
+  margin-bottom: 10px;
+}
+
+.site-footer a {
+  color: #6c757d;
+}
+
+.site-footer a:hover {
+  color: #007bff;
 }
