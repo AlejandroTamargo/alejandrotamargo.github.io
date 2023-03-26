@@ -188,10 +188,23 @@ img {
 
 .about-text{
     width: 70%;
-    margin-top: 5rem;
-    font-size: large;
+   
+    font-size: 16px;
     line-height: 1.5rem;
-    text-align: center;
+    
+}
+
+.mt{
+   margin-top: 3rem;
+}
+#border-box{
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(128, 0, 128, 0.5);
+  padding: 10px;
+  position: relative;
+  padding: 10px;
+  border-image: linear-gradient(to right, transparent, purple, transparent) 1;
 }
 
 
@@ -213,10 +226,6 @@ body {
   z-index: 1000;
 }
 
-/*
-Se le da la posición fija cuando llega al techo de la página 
-http://jsfiddle.net/39james/WucN3/ 
-*/
 .tabs-container.affix{
   position:fixed;
   top:0;
